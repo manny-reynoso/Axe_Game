@@ -1,3 +1,3 @@
 #include "raylib.h"
 
-int main() {}
+int main() { InitWindow(350, 200, "Window"); }
