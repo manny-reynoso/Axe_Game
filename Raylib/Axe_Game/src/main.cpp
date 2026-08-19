@@ -13,7 +13,7 @@ int main() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
-    drawCircle(175, 100, 10, BLACK);
+    DrawCircle(175, 100, 10, BLACK);
 
     EndDrawing();
   }
