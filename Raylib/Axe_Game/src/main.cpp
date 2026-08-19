@@ -1,7 +1,13 @@
 #include <raylib.h>
 
 int main() {
-  InitWindow(350, 200, "Window");
+
+  int width;
+  width = 350;
+
+  int height;
+  height = 200;
+  InitWindow(width, height, "Window");
 
   while (!WindowShouldClose()) {
     BeginDrawing();
