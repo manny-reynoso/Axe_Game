@@ -22,19 +22,19 @@ int main() {
     // Game Logic Start
     DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
 
-    if (IsKeyDown(KEY_D)) {
+    if (IsKeyDown(KEY_D) && circle_X_Pos < 350) {
       circle_X_Pos = circle_X_Pos + 10;
     }
 
-    if (IsKeyDown(KEY_A)) {
+    if (IsKeyDown(KEY_A) && circle_X_Pos > 0) {
       circle_X_Pos = circle_X_Pos - 10;
     }
 
-    if (IsKeyDown(KEY_W)) {
+    if (IsKeyDown(KEY_W) && circle_Y_Pos > 0) {
       circle_Y_Pos = circle_Y_Pos - 10;
     }
 
-    if (IsKeyDown(KEY_S)) {
+    if (IsKeyDown(KEY_S) && circle_Y_Pos < 200) {
       circle_Y_Pos = circle_Y_Pos + 10;
     }
 
