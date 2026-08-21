@@ -22,19 +22,19 @@ int main() {
     DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
 
     if (IsKeyDown(KEY_D)) {
-      circle_X_Pos = circle_X_Pos + 10;
+      circle_X_Pos = circle_X_Pos + 1;
     }
 
     if (IsKeyDown(KEY_A)) {
-      circle_X_Pos = circle_X_Pos - 10;
+      circle_X_Pos = circle_X_Pos - 1;
     }
 
     if (IsKeyDown(KEY_W)) {
-      circle_Y_Pos = circle_Y_Pos - 10;
+      circle_Y_Pos = circle_Y_Pos - 1;
     }
 
     if (IsKeyDown(KEY_S)) {
-      circle_Y_Pos = circle_Y_Pos - 10;
+      circle_Y_Pos = circle_Y_Pos - 1;
     }
 
     EndDrawing();
