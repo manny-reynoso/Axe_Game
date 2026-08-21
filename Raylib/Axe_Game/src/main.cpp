@@ -31,7 +31,7 @@ int main() {
     }
 
     if (IsKeyDown(KEY_W)) {
-      circle_Y_Pos = circle_Y_Pos - 1;
+      circle_Y_Pos = circle_Y_Pos + 1;
     }
 
     if (IsKeyDown(KEY_S)) {
