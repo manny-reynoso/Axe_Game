@@ -14,6 +14,7 @@ int main() {
   int circle_X_Pos{175};
   int circle_Y_Pos{100};
 
+  SetTargetFPS(60);
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(RAYWHITE);
