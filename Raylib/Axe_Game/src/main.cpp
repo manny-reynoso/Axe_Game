@@ -18,7 +18,7 @@ int main() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
-    DrawCircle(175, 100, 10, BLACK);
+    DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
 
     EndDrawing();
   }
