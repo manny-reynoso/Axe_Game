@@ -18,11 +18,17 @@ int main() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
+    // Game Logic Start
     DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
+
+    if (IsKeyDown(KEY_D)) {
+      circle_X_Pos = circle_X_Pos + 10;
+    }
 
     EndDrawing();
   }
 
+  // game Logi Ends
   CloseWindow();
 
   return 0;
