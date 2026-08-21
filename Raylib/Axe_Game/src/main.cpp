@@ -25,6 +25,10 @@ int main() {
       circle_X_Pos = circle_X_Pos + 10;
     }
 
+    if (IsKeyDown(KEY_A)) {
+      circle_X_Pos = circle_X_Pos - 10;
+    }
+
     EndDrawing();
   }
 
