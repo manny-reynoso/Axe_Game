@@ -2,6 +2,7 @@
 
 int main() {
 
+  // WIndow Dimensions
   int width;
   width = 350;
 
