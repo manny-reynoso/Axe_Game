@@ -10,6 +10,10 @@ int main() {
   height = 200;
   InitWindow(width, height, "Window");
 
+  // circle Coordinates
+  int circle_X_Pos{175};
+  int circle_Y_Pos{100};
+
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(RAYWHITE);
