@@ -21,6 +21,7 @@ int main() {
 
     // Game Logic Start
     DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
+    DrawRectangle(300, 0, 50, 50, RED);
 
     if (IsKeyDown(KEY_D) && circle_X_Pos < 350) {
       circle_X_Pos = circle_X_Pos + 10;
