@@ -11,8 +11,8 @@ int main() {
   InitWindow(width, height, "Window");
 
   // circle Coordinates
-  int circle_X_Pos{175};
-  int circle_Y_Pos{100};
+  int circle_X_Pos{1280};
+  int circle_Y_Pos{720};
 
   SetTargetFPS(60);
   while (!WindowShouldClose()) {
