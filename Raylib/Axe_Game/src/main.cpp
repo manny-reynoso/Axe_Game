@@ -4,10 +4,10 @@ int main() {
 
   // WIndow Dimensions
   int width;
-  width = 350;
+  width = 1280;
 
   int height;
-  height = 200;
+  height = 720;
   InitWindow(width, height, "Window");
 
   // circle Coordinates
