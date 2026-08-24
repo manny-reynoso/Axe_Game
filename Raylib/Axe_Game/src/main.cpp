@@ -80,14 +80,12 @@ int main() {
       if (IsKeyDown(KEY_S) && circle_Y_Pos < 720) {
         circle_Y_Pos += 10;
       }
-
-      EndDrawing();
     }
-
+    EndDrawing();
     // game Logi Ends
-    CloseWindow();
   }
 
+  CloseWindow();
   return 0;
 }
 
