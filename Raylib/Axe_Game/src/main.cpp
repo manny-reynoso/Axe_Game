@@ -14,6 +14,13 @@ int main() {
   int circle_X_Pos{175};
   int circle_Y_Pos{100};
 
+  // Axe Coordinates
+
+  int axe_x{400};
+  int axe_y{0};
+
+  int direction{10};
+
   SetTargetFPS(60);
   while (!WindowShouldClose()) {
     BeginDrawing();
@@ -21,22 +28,30 @@ int main() {
 
     // Game Logic Start
     DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
-    DrawRectangle(300, 0, 50, 50, RED);
+    DrawRectangle(axe_x, axe_y, 50, 50, RED);
 
-    if (IsKeyDown(KEY_D) && circle_X_Pos < 350) {
-      circle_X_Pos = circle_X_Pos + 10;
+    // Axe Movement
+
+    axe_y += direction;
+
+    if (axe_y > 720 || axe_y < 0) {
+      direction = -direction;
+    }
+
+    if (IsKeyDown(KEY_D) && circle_X_Pos < 1280) {
+      circle_X_Pos += 10;
     }
 
     if (IsKeyDown(KEY_A) && circle_X_Pos > 0) {
-      circle_X_Pos = circle_X_Pos - 10;
+      circle_X_Pos -= 10;
     }
 
     if (IsKeyDown(KEY_W) && circle_Y_Pos > 0) {
-      circle_Y_Pos = circle_Y_Pos - 10;
+      circle_Y_Pos -= 10;
     }
 
-    if (IsKeyDown(KEY_S) && circle_Y_Pos < 200) {
-      circle_Y_Pos = circle_Y_Pos + 10;
+    if (IsKeyDown(KEY_S) && circle_Y_Pos < 720) {
+      circle_Y_Pos += 10;
     }
 
     EndDrawing();
