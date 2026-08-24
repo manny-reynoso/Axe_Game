@@ -24,6 +24,18 @@ int main() {
   bool collision_with_axe{false};
 
   while (!WindowShouldClose()) {
+    // Restart the game when R is pressed
+    if (collision_with_axe && IsKeyPressed(KEY_R)) {
+      circle_X_Pos = 175;
+      circle_Y_Pos = 100;
+
+      axe_x = 400;
+      axe_y = 0;
+
+      direction = 10;
+      collision_with_axe = false;
+    }
+
     // Only update the game while there has not been a collision
     if (!collision_with_axe) {
       // Axe movement
@@ -75,17 +87,25 @@ int main() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
-    // Draw the game objects
     DrawCircle(circle_X_Pos, circle_Y_Pos, circle_Radius, BLACK);
     DrawRectangle(axe_x, axe_y, axe_length, axe_height, RED);
 
     if (collision_with_axe) {
-      const char *message{"Game Over!"};
-      int fontSize{40};
-      int textWidth{MeasureText(message, fontSize)};
+      const char *gameOverMessage{"Game Over!"};
+      const char *restartMessage{"Press R to restart"};
 
-      DrawText(message, (width - textWidth) / 2, (height - fontSize) / 2,
-               fontSize, RED);
+      int gameOverFontSize{40};
+      int restartFontSize{20};
+
+      int gameOverTextWidth{MeasureText(gameOverMessage, gameOverFontSize)};
+
+      int restartTextWidth{MeasureText(restartMessage, restartFontSize)};
+
+      DrawText(gameOverMessage, (width - gameOverTextWidth) / 2,
+               (height - gameOverFontSize) / 2, gameOverFontSize, RED);
+
+      DrawText(restartMessage, (width - restartTextWidth) / 2,
+               (height / 2) + 50, restartFontSize, DARKGRAY);
     }
 
     EndDrawing();
