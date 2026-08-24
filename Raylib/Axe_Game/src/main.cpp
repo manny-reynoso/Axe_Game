@@ -14,6 +14,14 @@ int main() {
   int circle_X_Pos{175};
   int circle_Y_Pos{100};
 
+  int circle_Radius = 10;
+
+  // Circle Collision
+
+  int l_circle_x{circle_X_Pos - circle_Radius};
+  int r_circle_x{circle_X_Pos + circle_Radius};
+  int u_circle_y{circle_Y_Pos - circle_Radius};
+  int b_circle_y{circle_Y_Pos + circle_Radius};
   // Axe Coordinates
 
   int axe_x{400};
@@ -27,7 +35,7 @@ int main() {
     ClearBackground(RAYWHITE);
 
     // Game Logic Start
-    DrawCircle(circle_X_Pos, circle_Y_Pos, 10, BLACK);
+    DrawCircle(circle_X_Pos, circle_Y_Pos, circle_Radius, BLACK);
     DrawRectangle(axe_x, axe_y, 50, 50, RED);
 
     // Axe Movement
